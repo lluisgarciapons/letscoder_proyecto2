@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg_gif {
+    height: calc(100vh - 56px);
+    background: no-repeat center / cover url("images/premier_league_pattern.gif");
+}
+
+.bg_laliga{
+    height: 100%;
+    background: no-repeat center / contain url("images/laliga-logo.png") ;
+}
+
+.hidden{
+    display: none;
+}
+
+.filters__checkbox {
+    display: flex;
+    justify-content: center;
+}
+
+.filters__checkbox div {
+    padding: 0 10px;
+}
+
+.filters__checkbox div label{
+    padding-right: 3px;
+}
+
+.partido {
+    background-color: rgb(114, 160, 161);
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+    margin: 20px 0;
+    border: 3px solid rgb(74, 118, 119);
+    border-radius: 20px;
+}
+
+.partido__equipo {
+    width: 40%;
+}
+
+.equipo__local {
+    text-align: right;
+}
+
+table img {
+    width: 30px;
+}
+
+.partido__resultado {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.partido div {
+    padding: 0 7px;
+}
+
+ tr :first-child{
+    text-align: right;
+}
+
+ tr :nth-child(2) {
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .partido {
+        flex-wrap: wrap;
+    }
+
+    .partido__equipo {
+        width: 50%;
+    }
+
+    .logo__local {
+        order: 1;
+    }
+
+    .partido__resultado{
+        flex-grow: 0;
+        order: 2;
+    }
+
+    .logo__visitante {
+        order: 3
+    }
+}
+
+
+
+.padre {
+    border: 1px solid red;
+}
+
+.padre div {
+    border: 1px solid green;
+}

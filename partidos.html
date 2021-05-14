@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>LaLiga - partidos</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LaLiga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Partidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clasificacion.html">Clasificación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stats.html">Estadísticas</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container pt-3">
+            <div class="filters row g-3 p-3 justify-content-around">
+                <div class="col-lg-5 col-md-12 text-center">
+                    <label for="filtro-nombre-equipo">Equipo:</label>
+                    <input type="text" name="equipo" id="filtro-nombre-equipo">
+                </div>
+                <div class="filters__checkbox col-lg-7 col-md-12 align-items-center">
+                    <div>
+                        <label for="filtro-ganado">Ganado</label><input type="radio" value="ganado" name="resultado"
+                            id="filtro-ganado">
+                    </div>
+                    <div>
+                        <label for="filtro-perdido">Perdido</label><input type="radio" value="perdido" name="resultado"
+                            id="filtro-perdido">
+                    </div>
+                    <div>
+                        <label for="filtro-empatado">Empatado</label><input type="radio" value="empatado"
+                            name="resultado" id="filtro-empatado">
+                    </div>
+                    <div>
+                        <label for="filtro-proximos">Proximos</label><input type="radio" value="proximos"
+                            name="resultado" id="filtro-proximos">
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <th>Local</th>
+                    <th>Resultado</th>
+                    <th>Visitante</th>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="matches.js"></script>
+    <script src="partidos.js"></script>
+</body>
+
+</html>
